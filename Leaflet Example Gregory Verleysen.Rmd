@@ -1,0 +1,29 @@
+---
+title: "31/01/2020"
+---
+
+Below is a map that shows the city where I live (Ghent).
+
+If you click the blue circle you will see a picture of the Gravensteen,
+which is an old castle near me.
+
+```{r out.width='100%', include=FALSE}
+## remote images -----
+### one image
+library(leaflet)
+library(sf)
+library(leafpop)
+```
+
+```{r out.width='100%', echo=FALSE}
+pnt = st_as_sf(data.frame(x = 3.72102, y = 51.05701),
+                coords = c("x", "y"),
+                crs = 4326)
+
+img = "https://upload.wikimedia.org/wikipedia/commons/8/89/Gravensteen%2C_Ghent_%28DSCF0191%29.jpg"
+
+leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(data = pnt, group = "pnt") %>%
+  addPopupImages(img, group = "pnt",width=2000)
+```
