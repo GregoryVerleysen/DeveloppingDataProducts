@@ -1,0 +1,40 @@
+---
+title: "Plotly example"
+author: "Gregory Verleysen"
+date: "15-2-2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r,include=FALSE}
+library(plotly)
+```
+
+
+## Introduction
+In this presentation I will be using the diamonds data to examine how the price varies
+in function of quality and carat.
+
+A plot will be made with ggplotly.
+
+## Data selection
+Because the large amount of data I will take a random sample.
+```{r cars, echo = TRUE}
+set.seed(13)
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+```
+
+```{r, include=FALSE}
+p <- ggplot(data = d, aes(x = carat, y = price)) +
+  geom_point(aes(text = paste("Clarity:", clarity)), size = 4) +
+  geom_smooth(aes(colour = cut, fill = cut)) + facet_wrap(~ cut)
+```
+
+## Plot
+```{r}
+ggplotly(p)
+```
+
