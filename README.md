@@ -28,6 +28,8 @@ Syntax highlighted code block
 
 [Leaflet picture](https://gregoryverleysen.github.io/DeveloppingDataProducts/Leaflet-Example-Gregory-Verleysen.html)
 
+[Plotly presentation](https://gregoryverleysen.github.io/DeveloppingDataProducts/Plotly-Example.html)
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
