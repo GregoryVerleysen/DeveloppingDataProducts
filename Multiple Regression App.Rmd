@@ -1,0 +1,44 @@
+---
+title: "Multiple regression app"
+author: "Gregory Verleysen"
+date: "16-2-2020"
+output:
+  ioslides_presentation: default
+  slidy_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Reading the file
+This app performs multiple regression on any csv file you want.
+
+First you select a csv file on your PC.
+Just like in R you can specify header (are the names of variables included)
+and what the separator and quote marks are.
+
+```{r,echo=TRUE}
+data<-read.csv("cars.csv",header=TRUE,sep=",",quote="")
+```
+
+## Data exploration
+Next you can inspect the data with structure and summary.
+Structure will give information about the types of variables.
+Summary will show some descriptive statistics for each variable.
+
+```{r,echo=TRUE}
+summary(data)
+```
+
+## Multiple regression and correlation
+Finally you can choose an outcome variable and multiple variables that you want as predictors.
+Linear regression will show the regression output for this model.
+Correlation will show the correlations between the variables that you selected.
+
+
+## Multiple regression example
+```{r,echo=TRUE}
+summary(lm(X.mpg.~X.disp.+X.hp.+X.drat.,data))
+```
+
