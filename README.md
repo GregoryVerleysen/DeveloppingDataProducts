@@ -4,5 +4,5 @@ This page contains my projects for the Coursera course: Developping Data Product
 
 [Plotly presentation](https://gregoryverleysen.github.io/DeveloppingDataProducts/Plotly-example.html)
 
-
+[Shiny Project presentation](https://gregoryverleysen.github.io/DeveloppingDataProducts/Multiple-Regression-App.html)
 
